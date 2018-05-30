@@ -8,7 +8,8 @@ if path not in sys.path:
 
 load_dotenv(os.path.join(path, '.flaskenv'))
 
-from hello import app
+from application import create_app
+app = create_app()
 app.debug = True
 
 from werkzeug.debug import DebuggedApplication
