@@ -10,7 +10,6 @@ load_dotenv(os.path.join(path, '.flaskenv'))
 
 from application import create_app
 app = create_app()
-app.debug = True
 
 from werkzeug.debug import DebuggedApplication
 application = DebuggedApplication(app, evalex=True)
