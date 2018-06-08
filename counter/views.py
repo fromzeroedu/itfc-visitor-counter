@@ -1,6 +1,7 @@
 from flask import Blueprint
 
 from counter.models import Counter
+from application import db
 
 counter_app = Blueprint('counter_app', __name__)
 
