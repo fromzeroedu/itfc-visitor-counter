@@ -1,5 +1,4 @@
 import os
-from application import create_app as create_app_base
 import unittest
 import pathlib
 
@@ -9,6 +8,7 @@ load_dotenv(os.path.join(env_dir, '.flaskenv'))
 
 from counter.models import Counter
 from application import db
+from application import create_app as create_app_base
 from utils.test_db import TestDB
 
 class CounterTest(unittest.TestCase):
@@ -16,7 +16,6 @@ class CounterTest(unittest.TestCase):
         return create_app_base(
             SQLALCHEMY_DATABASE_URI=self.db_uri,
             TESTING=True,
-            WTF_CSRF_ENABLED=False,
             SECRET_KEY = 'mySecret!'
         )
 
