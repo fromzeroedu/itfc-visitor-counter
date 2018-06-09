@@ -5,7 +5,7 @@ from flask_migrate import Migrate
 # setup db
 db = SQLAlchemy()
 
-def create_app():
+def create_app(**config_overrides):
     app = Flask(__name__)
 
     # Load config

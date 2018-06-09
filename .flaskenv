@@ -5,3 +5,4 @@ DB_HOST=localhost
 DB_USERNAME='counter_app'
 DB_PASSWORD='mypassword'
 DATABASE_NAME='counter'
+MYSQL_ROOT_PASSWORD=rootpass
