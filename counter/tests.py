@@ -35,5 +35,3 @@ class CounterTest(unittest.TestCase):
     def test_counter(self):
         rv = self.app.get('/')
         assert '1' in str(rv.data)
-        rv = self.app.get('/')
-        assert '2' in str(rv.data)
