@@ -11,6 +11,9 @@ def create_app(**config_overrides):
     # Load config
     app.config.from_pyfile('settings.py')
 
+    # apply overrides for tests
+    app.config.update(config_overrides)
+
     # initialize db
     db.init_app(app)
     migrate = Migrate(app, db)
